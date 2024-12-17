@@ -1,19 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-anycompanyhealth-dev-d14d2-authRole",
-      "UnauthRoleArn": "arn:aws:iam::856468998846:role/amplify-anycompanyhealth-dev-d14d2-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::856468998846:role/amplify-anycompanyhealth-dev-d14d2-authRole",
+      "AuthRoleName": "amplify-medicalchabot-dev-360c0-authRole",
+      "UnauthRoleArn": "arn:aws:iam::856468998846:role/amplify-medicalchabot-dev-360c0-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::856468998846:role/amplify-medicalchabot-dev-360c0-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-anycompanyhealth-dev-d14d2-deployment",
-      "UnauthRoleName": "amplify-anycompanyhealth-dev-d14d2-unauthRole",
-      "StackName": "amplify-anycompanyhealth-dev-d14d2",
-      "StackId": "arn:aws:cloudformation:us-east-1:856468998846:stack/amplify-anycompanyhealth-dev-d14d2/cd6c4e60-bb5b-11ef-a67e-0afff0186185",
-      "AmplifyAppId": "d15rk2oowav6oi"
+      "DeploymentBucketName": "amplify-medicalchabot-dev-360c0-deployment",
+      "UnauthRoleName": "amplify-medicalchabot-dev-360c0-unauthRole",
+      "StackName": "amplify-medicalchabot-dev-360c0",
+      "StackId": "arn:aws:cloudformation:us-east-1:856468998846:stack/amplify-medicalchabot-dev-360c0/57e07ea0-bc5f-11ef-b425-0e7e312e04ab",
+      "AmplifyAppId": "d3afbinj3otu1i"
     },
     "categories": {
       "auth": {
-        "anycompanyhealthcead53b4": {}
+        "medicalchabotdfaa2670": {}
       }
     }
   }

@@ -11,7 +11,7 @@ Amplify.configure({
     LexV2: {
       'MedicalChatbot': {
         aliasId: 'TSTALIASID',
-        botId: '3YH2SD73OM',
+        botId: 'JHEMNRFAXS',
         localeId: 'en_US',
         region: 'us-east-1'
       }
