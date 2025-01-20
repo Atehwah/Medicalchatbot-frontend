@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react'
 import './App.css'
 import { Interactions } from '@aws-amplify/interactions';
@@ -5,11 +6,12 @@ import { Amplify } from 'aws-amplify';
 import { Button, withAuthenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 import config from './amplifyconfiguration.json';
-
+import axios from 'axios';
 Amplify.configure(config);
 
-function App({ signOut, user }) {
-
+function App(
+  { signOut, user }
+) {
 
   const [lexRes, setLexRes] = useState([]);
   let questions = []
@@ -26,23 +28,26 @@ function App({ signOut, user }) {
     if (event.key === "Enter") {
       setMessages([...messages, userInput]);
       questions = [...questions, userInput]
-      chat(userInput)
+      sendReq(userInput, 'session1')
       console.log(questions);
       setUserInput("");
     }
   };
-
-  const chat = async (userInput) => {
-    console.log("I'm ccallled")
-    const response = await Interactions.send({
-      botName: "MedicalChatbot",
-      message: userInput,
-    });
-    console.log(response)
-    setLexRes(response.messages[0].content)
-    setLetsChat(true)
-  }
-
+  const sendReq = async (message,sessionid) => {
+   
+    axios.post(
+      "https://3m1qbfj1of.execute-api.us-east-1.amazonaws.com/lambdaapichatbot",
+      {
+        message: message,
+        sessionId: sessionid,
+      }
+    ).then((res)=>{
+      setLexRes(res.data.message)
+      setLetsChat(true)
+    }) 
+    
+ 
+};
   return (
     <>
       <div>
@@ -85,7 +90,7 @@ function App({ signOut, user }) {
                     <button className="icon-button">🎙️</button>
                   </div>
                 </div>
-              </> : <button onClick={() => chat('Hi')}>Start Chat</button>
+              </> : <button onClick={() => sendReq('Hello','session1')}>Start Chat</button>
             }
           </div>
         </div>
