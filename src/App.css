@@ -48,12 +48,12 @@
   align-items: center;
   height: 70vh;
   width: 100vw;
-  background-color: #121212;
+  background-color: #e1e1e1;
   color: white;
 }
 
 .chat-box {
-  background-color: #1e1e1e;
+  background-color: #808080;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -112,5 +112,4 @@
 .icon-button:hover {
   color: #00bcd4;
 }
-
 
